@@ -6,7 +6,11 @@
   margin: 1rem 0;
   background-color: #4b4b4b;
 }
-
+.button {
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
 .expense-item__description {
   display: flex;
   flex-direction: column;

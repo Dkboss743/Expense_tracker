@@ -1,8 +1,7 @@
 import React from "react";
 // import ReactDOM from "react-dom";
-import ReactDOM from "react-dom/client";
-import ExpenseItem from "./components/ExpenseItem";
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 function App() {
   const expenses = [
     {
@@ -26,6 +25,7 @@ function App() {
   ];
   return (
     <div>
+      <NewExpense />
       <Expenses expenses={expenses} />
     </div>
   );
