@@ -4,9 +4,6 @@ import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 function ExpenseItem(props) {
   const [title, setTitle] = useState(props.title);
-  const clickHandler = (e) => {
-    setTitle("Updated!");
-  };
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date}></ExpenseDate>
@@ -14,9 +11,6 @@ function ExpenseItem(props) {
         <h2>{title}</h2>
         <div className="expense-item__price">{props.amount}</div>
       </div>
-      <button onClick={clickHandler} className="button">
-        Change time
-      </button>
     </Card>
   );
 }
