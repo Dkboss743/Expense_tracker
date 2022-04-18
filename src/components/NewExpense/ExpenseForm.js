@@ -50,6 +50,9 @@ const ExpenseForm = (props) => {
     setEnteredAmount("");
     setEnteredTitle("");
   };
+  const hideForm = (event) => {
+    props.onAddNewExpense();
+  };
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -84,6 +87,9 @@ const ExpenseForm = (props) => {
       </div>
       <div className="new-expense__actions">
         <button type="submit">Add Expense</button>
+        <button type="button" onClick={hideForm}>
+          Cancel
+        </button>
       </div>
     </form>
   );
